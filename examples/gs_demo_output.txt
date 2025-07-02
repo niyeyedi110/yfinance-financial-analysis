@@ -1,0 +1,73 @@
+GOLDMAN SACHS REPORT VERIFICATION DEMO
+=====================================
+This demo simulates market data to verify GS report claims
+(No external data dependencies)
+
+Simulating 50 stocks over 90 days...
+Simulating stock market data...
+
+============================================================
+VERIFICATION RESULTS
+============================================================
+
+1. AVERAGE ABSOLUTE EARNINGS MOVE:
+   Our Simulation: 4.21%
+   GS Report: 4.4%
+   Difference: 0.19%
+
+2. AVERAGE DIRECTIONAL MOVE:
+   Our Simulation: +0.32%
+   GS Report: +0.4%
+
+3. NON-EARNINGS DAY MOVES:
+   Our Simulation: 1.82%
+   GS Report: 1.7%
+
+4. EARNINGS TO NON-EARNINGS RATIO:
+   Our Simulation: 2.31x
+   GS Target: <2.6x
+   ✓ Below target: Yes
+
+5. DISTRIBUTION ANALYSIS:
+   Positive earnings moves: 78 (52.0%)
+   Negative earnings moves: 72 (48.0%)
+
+============================================================
+OPTIONS TRADES ANALYSIS
+============================================================
+
+NKE - Straddle:
+  Reference Price: $61.42
+  Current Price: $62.50 (simulated)
+  Price Change: +1.8%
+  Intrinsic Value: $1.50
+  P&L: $-3.70 (-71.2%)
+
+STZ - Call:
+  Reference Price: $164.49
+  Current Price: $166.00 (simulated)
+  Price Change: +0.9%
+  Intrinsic Value: $0.00
+  P&L: $-3.92 (-100.0%)
+
+SAM - Put:
+  Reference Price: $196.79
+  Current Price: $194.00 (simulated)
+  Price Change: -1.4%
+  Intrinsic Value: $1.00
+  P&L: $-12.06 (-92.3%)
+
+============================================================
+SUMMARY
+============================================================
+
+This simulation demonstrates how the GS report findings
+can be verified using market data. Key observations:
+
+1. Earnings moves are indeed larger than non-earnings moves
+2. The ratio typically falls in the 2-3x range
+3. There's usually a slight positive bias on earnings days
+4. Options strategies depend heavily on realized volatility
+
+For real verification, use the full analysis scripts with
+actual market data from yfinance.
